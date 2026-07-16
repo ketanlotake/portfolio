@@ -651,16 +651,13 @@ main {
   margin-top: 0.24rem;
 }
 
-.lang-badge {
-  display: inline-block;
+/* Impact figures and proficiency levels. */
+.metric {
   background: #e6f4ea;
   color: #1a7f37;
-  border: 1px solid #b7e0c2;
   border-radius: 4px;
-  padding: 0.05rem 0.45rem;
-  font-size: 0.88rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
+  padding: 0.02rem 0.32rem;
+  font-weight: 700;
 }
 
 .orb {
