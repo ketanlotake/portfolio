@@ -15,6 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="i18n.js" defer></script>
   </head>
   <body>
     <div class="orb orb-a"></div>
@@ -35,23 +36,32 @@
           </p>
         </div>
         <nav aria-label="Primary">
-          <a href="#highlights">Summary</a>
-          <a href="#summary">Technology Stack</a>
-          <a href="#experience">Work History</a>
-          <a href="#projects">Projects</a>
+          <a href="#highlights" data-i18n="navSummary">Summary</a>
+          <a href="#summary" data-i18n="navStack">Technology Stack</a>
+          <a href="#experience" data-i18n="navExperience">Work History</a>
+          <a href="#projects" data-i18n="navProjects">Projects</a>
+          <button
+            class="lang-toggle"
+            type="button"
+            data-i18n="langToggle"
+            data-i18n-aria="langToggleAria"
+            aria-label="Switch to Japanese"
+          >
+            日本語
+          </button>
         </nav>
       </header>
 
       <section class="hero">
         <div class="hero-content">
-          <p class="pill">Software Engineer | Tokyo, Japan</p>
-          <h1>Software Engineer focused on reliable systems and measurable business outcomes.</h1>
-          <p>
+          <p class="pill" data-i18n="heroPill">Software Engineer | Tokyo, Japan</p>
+          <h1 data-i18n="heroTitle">Software Engineer focused on reliable systems and measurable business outcomes.</h1>
+          <p data-i18n-html="heroBodyHtml">
             <span class="metric">7+ years</span> of transforming finance business by improving scalability, automation maturity, and release reliability.
-            I bridge architecture, execution, and business strategy to deliver systems that scale and perform.
+            Bridges architecture, execution, and business strategy to deliver systems that scale and perform.
           </p>
           <div class="hero-cta">
-            <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn btn-primary" href="#projects" data-i18n="heroCta">View Projects</a>
           </div>
         </div>
 
@@ -61,6 +71,7 @@
               class="profile-photo"
               src="assets/Portfolio_Image.jpg"
               alt="Ketan Lotake profile photo"
+              data-i18n-alt="photoAlt"
               loading="eager"
               decoding="async"
             />
@@ -71,43 +82,43 @@
       <main>
         <section class="section" id="highlights">
           <div class="section-head">
-            <h2>Profile Summary</h2>
+            <h2 data-i18n="profileHeading">Profile Summary</h2>
           </div>
           <div class="recruiter-points">
             <article>
-              <h3>Current Role</h3>
-              <p>Software Development Engineer at MetLife Insurance KK, delivering enterprise-grade insurance platforms in Tokyo.</p>
+              <h3 data-i18n="currentRoleTitle">Current Role</h3>
+              <p data-i18n="currentRoleBody">Software Development Engineer at MetLife Insurance KK, delivering enterprise-grade insurance platforms in Tokyo.</p>
             </article>
             <article>
-              <h3>Leadership Value</h3>
-              <p>Combines hands-on engineering with technical leadership to align delivery quality, speed, and business priorities.</p>
+              <h3 data-i18n="leadershipTitle">Leadership Value</h3>
+              <p data-i18n="leadershipBody">Combines hands-on engineering with technical leadership to align delivery quality, speed, and business priorities.</p>
             </article>
             <article>
-              <h3>Business Impact</h3>
-              <p>Saved approximately <span class="metric">500M JPY</span> over five years with an in-house design that replaced a vendor proposal, cutting operating, development, and licensing costs. Cut <span class="metric">18M JPY</span> more annually through test automation, and scaled capacity by modernizing legacy services with microservices, DevOps, and cloud.</p>
+              <h3 data-i18n="impactTitle">Business Impact</h3>
+              <p data-i18n-html="impactBodyHtml">Saved approximately <span class="metric">500M JPY</span> over five years with an in-house design that replaced a vendor proposal, cutting operating, development, and licensing costs. Cut <span class="metric">18M JPY</span> more annually through test automation, and scaled capacity by modernizing legacy services with microservices, DevOps, and cloud.</p>
             </article>
             <article>
-              <h3>Delivery Excellence</h3>
-              <p>Leads end-to-end delivery using Agile,SAFe practices, with disciplined execution, risk management, and reliable release cadence.</p>
+              <h3 data-i18n="deliveryTitle">Delivery Excellence</h3>
+              <p data-i18n="deliveryBody">Leads end-to-end delivery using Agile,SAFe practices, with disciplined execution, risk management, and reliable release cadence.</p>
             </article>
             <article>
-              <h3>AI Engineering</h3>
-              <p>Working knowledge of agentic AI concepts, LLM integration, RAG fundamentals, and MCP server development.</p>
+              <h3 data-i18n="aiTitle">AI Engineering</h3>
+              <p data-i18n="aiBody">Working knowledge of agentic AI concepts, LLM integration, RAG fundamentals, and MCP server development.</p>
             </article>
             <article>
-              <h3>Language Skills</h3>
-              <p>Native English speaker with conversational Japanese at <span class="metric">N3 level and above</span>, enabling effective day-to-day collaboration in a Japanese workplace.</p>
+              <h3 data-i18n="langTitle">Language Skills</h3>
+              <p data-i18n-html="langBodyHtml">Native English speaker with conversational Japanese at <span class="metric">N3 level and above</span>, enabling effective day-to-day collaboration in a Japanese workplace.</p>
             </article>
           </div>
         </section>
 
         <section class="section" id="summary">
           <div class="section-head">
-            <h2>Technology Stack</h2>
+            <h2 data-i18n="stackHeading">Technology Stack</h2>
           </div>
           <div class="summary-grid">
             <article class="summary-card">
-              <h3>Frontend/Backend</h3>
+              <h3 data-i18n="stackFrontend">Frontend/Backend</h3>
               <ul class="tech-list">
                 <li class="tech-pill"><img src="assets/icons/tech/java.svg" alt="" loading="lazy" />Java</li>
                 <li class="tech-pill"><img src="assets/icons/tech/spring-boot.svg" alt="" loading="lazy" />Spring Boot</li>
@@ -117,7 +128,7 @@
               </ul>
             </article>
             <article class="summary-card">
-              <h3>Platform</h3>
+              <h3 data-i18n="stackPlatform">Platform</h3>
               <ul class="tech-list">
                 <li class="tech-pill"><img src="assets/icons/tech/aks.svg" alt="" loading="lazy" />AKS</li>
                 <li class="tech-pill"><img src="assets/icons/tech/azure-devops.svg" alt="" loading="lazy" />Azure DevOps</li>
@@ -130,7 +141,7 @@
               </ul>
             </article>
             <article class="summary-card">
-              <h3>Database</h3>
+              <h3 data-i18n="stackDatabase">Database</h3>
               <ul class="tech-list">
                 <li class="tech-pill"><img src="assets/icons/tech/oracle-db.svg" alt="" loading="lazy" />Oracle DB</li>
                 <li class="tech-pill"><img src="assets/icons/tech/mongodb.svg" alt="" loading="lazy" />MongoDB</li>
@@ -143,23 +154,23 @@
 
         <section class="section" id="experience">
           <div class="section-head">
-            <h2>Work History</h2>
+            <h2 data-i18n="expHeading">Work History</h2>
           </div>
           <div class="timeline">
             <article>
-              <h3>MetLife Insurance KK, Tokyo</h3>
-              <p class="role">Software Development Engineer | Jun 2023 - Present</p>
+              <h3 data-i18n="metlifeName">MetLife Insurance KK, Tokyo</h3>
+              <p class="role" data-i18n="metlifeRole">Software Development Engineer | Jun 2023 - Present</p>
               <ul>
-                <li>Lead and mentor engineers delivering microservices for production insurance systems.</li>
-                <li>Own architecture and execution for scalable, cloud-native releases.</li>
+                <li data-i18n="metlifeBullet1">Leads and mentors engineers delivering microservices for production insurance systems.</li>
+                <li data-i18n="metlifeBullet2">Owns architecture and execution for scalable, cloud-native releases.</li>
               </ul>
             </article>
             <article>
-              <h3>Rakuten Bank Ltd., Tokyo</h3>
-              <p class="role">Application Developer | Oct 2018 - May 2023</p>
+              <h3 data-i18n="rakutenName">Rakuten Bank Ltd., Tokyo</h3>
+              <p class="role" data-i18n="rakutenRole">Application Developer | Oct 2018 - May 2023</p>
               <ul>
-                <li>Delivered banking capabilities across both monolithic and modernized platforms.</li>
-                <li>Improved release quality and operational reliability through disciplined engineering practices.</li>
+                <li data-i18n="rakutenBullet1">Delivered banking capabilities across both monolithic and modernized platforms.</li>
+                <li data-i18n="rakutenBullet2">Improved release quality and operational reliability through disciplined engineering practices.</li>
               </ul>
             </article>
           </div>
@@ -167,23 +178,23 @@
 
         <section class="section" id="projects">
           <div class="section-head">
-            <h2>Projects</h2>
+            <h2 data-i18n="projHeading">Projects</h2>
           </div>
           <div class="project-grid">
             <article class="project-card">
-              <p class="project-meta">2025 - Present | Dev Team Lead</p>
-              <h3>New Insurance Product Delivery</h3>
-              <p>
-                Deliver multiple insurance products to production using Agile methodology, driving faster time-to-market,
+              <p class="project-meta" data-i18n="proj1Meta">2025 - Present | Dev Team Lead</p>
+              <h3 data-i18n="proj1Title">New Insurance Product Delivery</h3>
+              <p data-i18n="proj1Body">
+                Delivered multiple insurance products to production using Agile methodology, driving faster time-to-market,
                 iterative delivery to the business, and strong collaboration between business and engineering teams.
               </p>
               <p class="tags">Spring Boot, Java, AKS, Azure DevOps, Gradle, Cosmos DB, Istio, IBM APIC</p>
             </article>
 
             <article class="project-card">
-              <p class="project-meta">2023 - 2024 | Engineer</p>
-              <h3>Cloud Platform Migration: IaaS to PaaS</h3>
-              <p>
+              <p class="project-meta" data-i18n="proj2Meta">2023 - 2024 | Engineer</p>
+              <h3 data-i18n="proj2Title">Cloud Platform Migration: IaaS to PaaS</h3>
+              <p data-i18n="proj2Body">
                 Migrated Azure IaaS workloads to PaaS and implemented Azure Cosmos DB, using cloud-native technologies and Agile
                 delivery frameworks to drive scalable digital transformation aligned with long-term scalability and operational excellence.
               </p>
@@ -191,19 +202,19 @@
             </article>
 
             <article class="project-card">
-              <p class="project-meta">2018 - 2022 | Engineer</p>
-              <h3>Monolith to Microservices Modernization</h3>
-              <p>
-                Modernized a legacy monolithic system into containerized services, significantly improving scalability and enhancing 
+              <p class="project-meta" data-i18n="proj3Meta">2018 - 2022 | Engineer</p>
+              <h3 data-i18n="proj3Title">Monolith to Microservices Modernization</h3>
+              <p data-i18n="proj3Body">
+                Modernized a legacy monolithic system into containerized services, significantly improving scalability and enhancing
                 operational release capabilities using DevOps practices, without disrupting core functionality.
               </p>
               <p class="tags">OpenShift, JBoss, Red Hat Data Grid, Maven, Jenkins, GitLab</p>
             </article>
 
             <article class="project-card">
-              <p class="project-meta">2020 - 2021 | Engineer</p>
-              <h3>[Monolithic] Full Period Support for Deposit and Withdrawal Details Report</h3>
-              <p>
+              <p class="project-meta" data-i18n="proj4Meta">2020 - 2021 | Engineer</p>
+              <h3 data-i18n="proj4Title">[Monolithic] Full Period Support for Deposit and Withdrawal Details Report</h3>
+              <p data-i18n-html="proj4BodyHtml">
                 Added a new service to the existing monolithic framework to provide full-period support for deposit and withdrawal
                 details reporting, improving reporting continuity and operational reliability. Designed a leaner in-house alternative
                 to the vendor-proposed approach, saving approximately <span class="metric">500M JPY over five years</span> across
@@ -213,9 +224,9 @@
             </article>
 
             <article class="project-card">
-              <p class="project-meta">2019 - 2020 | Engineer</p>
-              <h3>Automated Regression Framework</h3>
-              <p>
+              <p class="project-meta" data-i18n="proj5Meta">2019 - 2020 | Engineer</p>
+              <h3 data-i18n="proj5Title">Automated Regression Framework</h3>
+              <p data-i18n-html="proj5BodyHtml">
                 Designed and implemented a regression automation framework that reduced operational expenditure by
                 approximately <span class="metric">18M JPY per year</span>.
               </p>
@@ -226,41 +237,41 @@
 
         <section class="section split">
           <article>
-            <h2>Education</h2>
+            <h2 data-i18n="eduHeading">Education</h2>
             <div class="table-wrap">
-              <table class="education-table" aria-label="Education details">
+              <table class="education-table" aria-label="Education details" data-i18n-aria="eduTableAria">
                 <thead>
                   <tr>
-                    <th>Degree</th>
-                    <th>Institute</th>
-                    <th>Year</th>
-                    <th>Score</th>
+                    <th data-i18n="thDegree">Degree</th>
+                    <th data-i18n="thInstitute">Institute</th>
+                    <th data-i18n="thYear">Year</th>
+                    <th data-i18n="thScore">Score</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td data-label="Degree">M.Tech, Computer Engineering</td>
-                    <td data-label="Institute">VJTI, Mumbai</td>
-                    <td data-label="Year">2018</td>
-                    <td data-label="Score">CPI 8.83</td>
+                    <td data-label="Degree" data-i18n-label="thDegree" data-i18n="edu1Degree">M.Tech, Computer Engineering</td>
+                    <td data-label="Institute" data-i18n-label="thInstitute" data-i18n="edu1Institute">VJTI, Mumbai</td>
+                    <td data-label="Year" data-i18n-label="thYear" data-i18n="edu1Year">2018</td>
+                    <td data-label="Score" data-i18n-label="thScore" data-i18n="edu1Score">CPI 8.83</td>
                   </tr>
                   <tr>
-                    <td data-label="Degree">B.E., Computer Science Engineering</td>
-                    <td data-label="Institute">KIT, Kolhapur</td>
-                    <td data-label="Year">2015</td>
-                    <td data-label="Score">62.03%</td>
+                    <td data-label="Degree" data-i18n-label="thDegree" data-i18n="edu2Degree">B.E., Computer Science Engineering</td>
+                    <td data-label="Institute" data-i18n-label="thInstitute" data-i18n="edu2Institute">KIT, Kolhapur</td>
+                    <td data-label="Year" data-i18n-label="thYear" data-i18n="edu2Year">2015</td>
+                    <td data-label="Score" data-i18n-label="thScore" data-i18n="edu2Score">62.03%</td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </article>
           <article>
-            <h2>Certifications and Strengths</h2>
+            <h2 data-i18n="certHeading">Certifications and Strengths</h2>
             <ul class="clean-list">
-              <li>Java Programming, Grade B+, Seed InfoTech</li>
-              <li>Advanced Java Programming, Grade A, Seed InfoTech</li>
-              <li>Japanese proficiency: <span class="metric">N3 (conversational) and above</span></li>
-              <li>Strengths: team building, ownership, proactive execution, continuous improvement</li>
+              <li data-i18n="cert1">Java Programming, Grade B+, Seed InfoTech</li>
+              <li data-i18n="cert2">Advanced Java Programming, Grade A, Seed InfoTech</li>
+              <li data-i18n-html="cert3Html">Japanese proficiency: <span class="metric">N3 (conversational) and above</span></li>
+              <li data-i18n="cert4">Strengths: team building, ownership, proactive execution, continuous improvement</li>
             </ul>
           </article>
         </section>

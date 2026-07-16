@@ -47,7 +47,8 @@ html {
 
 body {
   margin: 0;
-  font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: "Nunito", "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic UI",
+    Meiryo, Helvetica, Arial, sans-serif;
   font-size: 1.05rem;
   color: var(--text);
   background:
@@ -64,7 +65,8 @@ h1,
 h2,
 h3,
 .brand {
-  font-family: "Nunito", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: "Nunito", "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic UI",
+    Meiryo, Helvetica, Arial, sans-serif;
   letter-spacing: -0.02em;
 }
 
@@ -192,6 +194,33 @@ nav a:hover {
   color: #ffffff;
   background: rgba(255, 255, 255, 0.13);
   border-color: rgba(214, 229, 250, 0.45);
+}
+
+/* Sits in the nav row as a peer of the links, so it wraps with them rather
+   than forcing its own line. Metrics match nav a to keep the row height.
+   Inverted against the dark topbar so it reads as a control, not a link —
+   the fill and text reuse colours already in the topbar and hero. */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #22325a;
+  background: #e8f1ff;
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 1px 3px rgba(10, 24, 58, 0.28);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+
+.lang-toggle:hover {
+  background: #ffffff;
+  border-color: #ffffff;
 }
 
 .hero {
@@ -874,7 +903,8 @@ main {
     gap: 0.25rem;
   }
 
-  nav a {
+  nav a,
+  .lang-toggle {
     padding: 0.3rem 0.45rem;
     font-size: 0.92rem;
   }
